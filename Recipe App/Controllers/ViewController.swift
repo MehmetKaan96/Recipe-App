@@ -37,6 +37,11 @@ class ViewController: UIViewController {
         configureNavBarRightButton()
         self.mealCollectionView.layer.borderColor = UIColor(named: "BackgroundColor")?.cgColor
         self.mealCollectionView.layer.borderWidth = 2.5
+        self.mealCollectionView.layer.cornerRadius = 10
+        self.categoryCollectionView.layer.borderColor = UIColor.black.cgColor
+        self.categoryCollectionView.layer.borderWidth = 2.5
+        self.categoryCollectionView.layer.cornerRadius = 10
+        
         
         vm.loadMeals { [weak self] meal, error in
             guard let self = self else { return }
