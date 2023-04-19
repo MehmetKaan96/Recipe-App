@@ -114,11 +114,85 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P7Q-YF-AH1">
+                                <rect key="frame" x="0.0" y="358" width="393" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="aML-uA-aTx"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="9k9-NG-iSC">
+                                    <size key="itemSize" width="100" height="90"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="Qgk-Tt-wlV" customClass="CategoryCollectionViewCell" customModule="Recipe_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uBl-vN-TIx">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g98-Pi-Rsa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="0fN-Q5-PbJ"/>
+                                                        <constraint firstAttribute="width" constant="100" id="9o5-UF-sEK"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slc-Nr-YEc">
+                                                    <rect key="frame" x="0.0" y="66" width="100" height="24"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TSL-oH-etK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="24"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="QXy-g1-dyM"/>
+                                                        <constraint firstAttribute="height" constant="24" id="VY8-n8-hgL"/>
+                                                    </constraints>
+                                                    <blurEffect style="regular"/>
+                                                </visualEffectView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZS-D1-8zu">
+                                                    <rect key="frame" x="36" y="66" width="28" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="9T7-nx-njP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="11"/>
+                                                    <color key="textColor" name="categorylabelcolor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="g98-Pi-Rsa" firstAttribute="leading" secondItem="uBl-vN-TIx" secondAttribute="leading" id="2uu-Q7-qfS"/>
+                                                <constraint firstAttribute="trailing" secondItem="g98-Pi-Rsa" secondAttribute="trailing" id="5eu-4z-5KQ"/>
+                                                <constraint firstItem="cZS-D1-8zu" firstAttribute="leading" relation="lessThanOrEqual" secondItem="uBl-vN-TIx" secondAttribute="leading" constant="36" id="MIt-sW-eiN"/>
+                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="cZS-D1-8zu" secondAttribute="trailing" constant="36" id="Nty-ZB-QTj"/>
+                                                <constraint firstItem="slc-Nr-YEc" firstAttribute="top" secondItem="uBl-vN-TIx" secondAttribute="top" constant="66" id="Uai-YS-Q6G"/>
+                                                <constraint firstAttribute="bottom" secondItem="g98-Pi-Rsa" secondAttribute="bottom" id="a6r-Ph-aiT"/>
+                                                <constraint firstAttribute="bottom" secondItem="slc-Nr-YEc" secondAttribute="bottom" id="do0-4O-2ig"/>
+                                                <constraint firstItem="g98-Pi-Rsa" firstAttribute="top" secondItem="uBl-vN-TIx" secondAttribute="top" id="f9i-9D-Puz"/>
+                                                <constraint firstAttribute="trailing" secondItem="slc-Nr-YEc" secondAttribute="trailing" id="hnO-Ti-rih"/>
+                                                <constraint firstAttribute="bottom" secondItem="cZS-D1-8zu" secondAttribute="bottom" constant="8" id="pSQ-Q4-2HT"/>
+                                                <constraint firstItem="slc-Nr-YEc" firstAttribute="leading" secondItem="uBl-vN-TIx" secondAttribute="leading" id="pkc-8K-QbY"/>
+                                                <constraint firstItem="cZS-D1-8zu" firstAttribute="top" secondItem="uBl-vN-TIx" secondAttribute="top" constant="66" id="y4X-F7-AOK"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryImageView" destination="g98-Pi-Rsa" id="Ifu-kU-5FH"/>
+                                            <outlet property="categoryNameLabel" destination="cZS-D1-8zu" id="Y4Q-X7-QYP"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="P7Q-YF-AH1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1mA-oQ-Tba"/>
+                            <constraint firstItem="P7Q-YF-AH1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Aew-cC-2cJ"/>
                             <constraint firstItem="LeY-d1-mwT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ijt-aj-o9k"/>
+                            <constraint firstItem="P7Q-YF-AH1" firstAttribute="top" secondItem="LeY-d1-mwT" secondAttribute="bottom" constant="5" id="MvY-32-HeQ"/>
                             <constraint firstItem="LeY-d1-mwT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qlz-6K-KGo"/>
                             <constraint firstItem="LeY-d1-mwT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eWk-BQ-zDM"/>
                         </constraints>
@@ -130,6 +204,7 @@
                     </navigationItem>
                     <size key="freeformSize" width="393" height="852"/>
                     <connections>
+                        <outlet property="categoryCollectionView" destination="P7Q-YF-AH1" id="9v5-vb-AlH"/>
                         <outlet property="mealCollectionView" destination="LeY-d1-mwT" id="QwQ-ac-onv"/>
                     </connections>
                 </viewController>
@@ -165,6 +240,9 @@
         <image name="sidemenu" width="20" height="15"/>
         <namedColor name="BackgroundColor">
             <color red="0.9882352941176471" green="0.54509803921568623" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="categorylabelcolor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

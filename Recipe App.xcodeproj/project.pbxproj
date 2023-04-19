@@ -37,6 +37,7 @@
 		D368432B29F0045300E6B8CA /* MealCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368432A29F0045300E6B8CA /* MealCategoryViewModel.swift */; };
 		D368433029F0300100E6B8CA /* MealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368432F29F0300100E6B8CA /* MealCollectionViewCell.swift */; };
 		D368433329F0305900E6B8CA /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368433229F0305900E6B8CA /* ExtensionViewController.swift */; };
+		D368433729F079AD00E6B8CA /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368433629F079AD00E6B8CA /* CategoryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		D368432A29F0045300E6B8CA /* MealCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryViewModel.swift; sourceTree = "<group>"; };
 		D368432F29F0300100E6B8CA /* MealCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCollectionViewCell.swift; sourceTree = "<group>"; };
 		D368433229F0305900E6B8CA /* ExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
+		D368433629F079AD00E6B8CA /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				D368432F29F0300100E6B8CA /* MealCollectionViewCell.swift */,
+				D368433629F079AD00E6B8CA /* CategoryCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				D36842EA29EFED3E00E6B8CA /* ViewController.swift in Sources */,
 				D368432929F002F900E6B8CA /* MealCategory.swift in Sources */,
 				D368432729EFFB7F00E6B8CA /* MealViewModel.swift in Sources */,
+				D368433729F079AD00E6B8CA /* CategoryCollectionViewCell.swift in Sources */,
 				D368433329F0305900E6B8CA /* ExtensionViewController.swift in Sources */,
 				D368432029EFF53C00E6B8CA /* MealDBAPI.swift in Sources */,
 				D368433029F0300100E6B8CA /* MealCollectionViewCell.swift in Sources */,

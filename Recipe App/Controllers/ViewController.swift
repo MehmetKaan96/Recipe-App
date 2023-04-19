@@ -13,7 +13,9 @@ class ViewController: UIViewController {
     var meals = [Meal]()
     var categories = [MealCategory]()
     var imageUrls = [URL]()
+    var categoryImageUrls = [URL]()
     
+    @IBOutlet weak var categoryCollectionView: UICollectionView!
     
     @IBOutlet weak var mealCollectionView: UICollectionView!
     func configureNavBarRightButton() {
@@ -29,7 +31,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         mealCollectionView.dataSource = self
-        
+        categoryCollectionView.dataSource = self
         
         
         configureNavBarRightButton()
@@ -63,6 +65,15 @@ class ViewController: UIViewController {
             }
             if let categories = categories {
                 self.categories = categories
+                
+                for category in self.categories {
+                    if let imageUrl = URL(string: category.strCategoryThumb) {
+                        self.categoryImageUrls.append(imageUrl)
+                    }
+                }
+                DispatchQueue.main.async {
+                    self.categoryCollectionView.reloadData()
+                }
             }
         }
     }
