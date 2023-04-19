@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wfI-FW-pP0">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+        <array key="Nunito-SemiBold.ttf">
+            <string>Nunito-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Recipe App-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Recipe_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LeY-d1-mwT">
+                                <rect key="frame" x="0.0" y="103" width="393" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="tSg-1W-Ey2"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="2iV-K2-TAY">
+                                    <size key="itemSize" width="292" height="240"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MealsCell" id="5IR-kJ-gnr" customClass="MealCollectionViewCell" customModule="Recipe_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="5" width="292" height="240"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0Ro-Aq-vFf">
+                                            <rect key="frame" x="0.0" y="0.0" width="292" height="240"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AeK-qs-lTE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="292" height="240"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="290" id="6ei-1j-czJ"/>
+                                                        <constraint firstAttribute="height" constant="240" id="eOS-WU-MY0"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <visualEffectView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ps3-T4-WiP">
+                                                    <rect key="frame" x="5" y="170" width="282" height="65"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RwC-lK-JlF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="282" height="65"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gjj-60-eXf">
+                                                                <rect key="frame" x="8" y="8" width="74" height="49"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxm-Wz-Tzz">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="20" id="7MM-pY-MUo"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGG-7l-MUA">
+                                                                        <rect key="frame" x="0.0" y="28" width="40.666666666666664" height="21"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="22" id="wcG-K6-rfu"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="16"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="Gjj-60-eXf" secondAttribute="bottom" constant="8" id="4I0-aM-dYV"/>
+                                                            <constraint firstItem="Gjj-60-eXf" firstAttribute="top" secondItem="RwC-lK-JlF" secondAttribute="top" constant="8" id="Tyb-Q9-uhs"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Gjj-60-eXf" secondAttribute="trailing" constant="200" id="X6j-sZ-EAd"/>
+                                                            <constraint firstItem="Gjj-60-eXf" firstAttribute="leading" secondItem="RwC-lK-JlF" secondAttribute="leading" constant="8" id="feg-Lj-LCB"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <blurEffect style="systemUltraThinMaterial"/>
+                                                </visualEffectView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Ps3-T4-WiP" secondAttribute="trailing" constant="5" id="6o3-K4-Ngm"/>
+                                                <constraint firstItem="AeK-qs-lTE" firstAttribute="leading" secondItem="0Ro-Aq-vFf" secondAttribute="leading" id="Aql-j8-GcR"/>
+                                                <constraint firstItem="AeK-qs-lTE" firstAttribute="top" secondItem="0Ro-Aq-vFf" secondAttribute="top" id="Srp-Qc-5V3"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ps3-T4-WiP" secondAttribute="bottom" constant="5" id="VOj-6K-J9j"/>
+                                                <constraint firstItem="Ps3-T4-WiP" firstAttribute="top" secondItem="0Ro-Aq-vFf" secondAttribute="top" constant="170" id="bL0-kZ-jSH"/>
+                                                <constraint firstAttribute="trailing" secondItem="AeK-qs-lTE" secondAttribute="trailing" id="d27-SP-DFe"/>
+                                                <constraint firstItem="Ps3-T4-WiP" firstAttribute="leading" secondItem="0Ro-Aq-vFf" secondAttribute="leading" constant="5" id="d3x-IF-3gt"/>
+                                                <constraint firstAttribute="bottom" secondItem="AeK-qs-lTE" secondAttribute="bottom" id="sML-1u-V2C"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="292" height="240"/>
+                                        <connections>
+                                            <outlet property="categoryLabel" destination="Yxm-Wz-Tzz" id="xTc-WX-YB9"/>
+                                            <outlet property="mealImageView" destination="AeK-qs-lTE" id="gIe-3o-0a5"/>
+                                            <outlet property="mealNameLabel" destination="zGG-7l-MUA" id="V1G-Ng-qrj"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LeY-d1-mwT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ijt-aj-o9k"/>
+                            <constraint firstItem="LeY-d1-mwT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qlz-6K-KGo"/>
+                            <constraint firstItem="LeY-d1-mwT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eWk-BQ-zDM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Recipe App" id="yPN-uw-br0">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="sidemenu" id="8Oy-8p-IhJ">
+                            <color key="tintColor" name="BackgroundColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <size key="freeformSize" width="393" height="852"/>
+                    <connections>
+                        <outlet property="mealCollectionView" destination="LeY-d1-mwT" id="QwQ-ac-onv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.28244274809151" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yUN-eA-Loa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wfI-FW-pP0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <size key="freeformSize" width="393" height="852"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OXU-Ma-CNB">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="14"/>
+                            <color key="textColor" name="BackgroundColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YFu-Ms-li3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Neq-yQ-9B1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sidemenu" width="20" height="15"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.9882352941176471" green="0.54509803921568623" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
