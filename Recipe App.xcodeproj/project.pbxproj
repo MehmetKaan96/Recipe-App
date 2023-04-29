@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D33F32C129F4090C003275B1 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33F32C029F4090C003275B1 /* CategoryListViewController.swift */; };
+		D33F32C329F40979003275B1 /* CategoryExtensionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33F32C229F40979003275B1 /* CategoryExtensionVC.swift */; };
+		D33F32C629F40DA5003275B1 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33F32C529F40DA5003275B1 /* CustomTabBarController.swift */; };
+		D33F32C829F40E3C003275B1 /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33F32C729F40E3C003275B1 /* CustomTabbar.swift */; };
 		D36842E629EFED3E00E6B8CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36842E529EFED3E00E6B8CA /* AppDelegate.swift */; };
 		D36842E829EFED3E00E6B8CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36842E729EFED3E00E6B8CA /* SceneDelegate.swift */; };
 		D36842EA29EFED3E00E6B8CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36842E929EFED3E00E6B8CA /* ViewController.swift */; };
@@ -41,6 +45,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D33F32C029F4090C003275B1 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
+		D33F32C229F40979003275B1 /* CategoryExtensionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryExtensionVC.swift; sourceTree = "<group>"; };
+		D33F32C529F40DA5003275B1 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		D33F32C729F40E3C003275B1 /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
 		D36842E229EFED3E00E6B8CA /* Recipe App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36842E529EFED3E00E6B8CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D36842E729EFED3E00E6B8CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D33F32C429F40D71003275B1 /* CustomComponent */ = {
+			isa = PBXGroup;
+			children = (
+				D33F32C529F40DA5003275B1 /* CustomTabBarController.swift */,
+				D33F32C729F40E3C003275B1 /* CustomTabbar.swift */,
+			);
+			path = CustomComponent;
+			sourceTree = "<group>";
+		};
 		D36842D929EFED3E00E6B8CA = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +123,7 @@
 		D36842E429EFED3E00E6B8CA /* Recipe App */ = {
 			isa = PBXGroup;
 			children = (
+				D33F32C429F40D71003275B1 /* CustomComponent */,
 				D368432129EFF57100E6B8CA /* Constant */,
 				D368431E29EFF50B00E6B8CA /* API */,
 				D368431D29EFF4AB00E6B8CA /* Model */,
@@ -152,6 +170,7 @@
 				D368433129F0304B00E6B8CA /* Extension */,
 				D368432E29F02FEA00E6B8CA /* Cells */,
 				D36842E929EFED3E00E6B8CA /* ViewController.swift */,
+				D33F32C029F4090C003275B1 /* CategoryListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -210,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				D368433229F0305900E6B8CA /* ExtensionViewController.swift */,
+				D33F32C229F40979003275B1 /* CategoryExtensionVC.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -302,6 +322,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D368432329EFF57E00E6B8CA /* Constants.swift in Sources */,
+				D33F32C129F4090C003275B1 /* CategoryListViewController.swift in Sources */,
+				D33F32C629F40DA5003275B1 /* CustomTabBarController.swift in Sources */,
+				D33F32C329F40979003275B1 /* CategoryExtensionVC.swift in Sources */,
+				D33F32C829F40E3C003275B1 /* CustomTabbar.swift in Sources */,
 				D36842EA29EFED3E00E6B8CA /* ViewController.swift in Sources */,
 				D368432929F002F900E6B8CA /* MealCategory.swift in Sources */,
 				D368432729EFFB7F00E6B8CA /* MealViewModel.swift in Sources */,

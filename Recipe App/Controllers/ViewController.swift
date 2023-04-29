@@ -9,15 +9,51 @@ import UIKit
 
 class ViewController: UIViewController {
     let vm = MealViewModel()
-    let cvm = MealCategoryViewModel()
+    
     var meals = [Meal]()
-    var categories = [MealCategory]()
+    
     var imageUrls = [URL]()
-    var categoryImageUrls = [URL]()
     
-    @IBOutlet weak var categoryCollectionView: UICollectionView!
     
+    @IBOutlet weak var composeMealButton: UIButton!
+    @IBOutlet weak var composeImageView: UIImageView!
     @IBOutlet weak var mealCollectionView: UICollectionView!
+    
+    @IBOutlet weak var composeStack: UIStackView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        mealCollectionView.dataSource = self
+        configureNavBarRightButton()
+        configureCollectionViews()
+        
+        getMeals()
+        configure()
+        
+    }
+    
+    func getMeals() {
+        vm.loadMeals { [weak self] meal, error in
+            guard let self = self else { return }
+            if let error = error {
+                print(error)
+            }
+            if let meal = meal {
+                self.meals = meal
+                
+                for meal in self.meals {
+                    if let imageUrl = URL(string: meal.strMealThumb) {
+                        self.imageUrls.append(imageUrl)
+                    }
+                }
+                DispatchQueue.main.async {
+                    self.mealCollectionView.reloadData()
+                }
+            }
+        }
+    }
+    
+    
     func configureNavBarRightButton() {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 32, height: 38))
         imageView.image = UIImage(named: "Profile")
@@ -31,61 +67,22 @@ class ViewController: UIViewController {
         self.mealCollectionView.layer.borderColor = UIColor(named: "BackgroundColor")?.cgColor
         self.mealCollectionView.layer.borderWidth = 2.5
         self.mealCollectionView.layer.cornerRadius = 10
-        self.categoryCollectionView.layer.borderColor = UIColor.black.cgColor
-        self.categoryCollectionView.layer.borderWidth = 2.5
-        self.categoryCollectionView.layer.cornerRadius = 10
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        mealCollectionView.dataSource = self
-        categoryCollectionView.dataSource = self
-        
-        
-        configureNavBarRightButton()
-        configureCollectionViews()
-        
-        
-        vm.loadMeals { [weak self] meal, error in
-            guard let self = self else { return }
-            if let error = error {
-                print(error)
-            }
-            if let meal = meal {
-                self.meals = meal
-                
-                for meal in self.meals {
-                    if let imageUrl = URL(string: meal.strMealThumb) {
-                        self.imageUrls.append(imageUrl)
-                        }
-                }
-                DispatchQueue.main.async {
-                    self.mealCollectionView.reloadData()
-                }
-            }
-        }
-        
-        cvm.getAllCategories { [weak self] categories, error in
-            guard let self = self else { return }
+    func configure() {
+        composeStack.layer.cornerRadius = 10
+        composeMealButton.layer.borderColor = UIColor.white.cgColor
+        composeMealButton.layer.borderWidth = 1
+        composeMealButton.layer.cornerRadius = 20
+    }
+    
+    func getRandom() {
+        vm.loadRandomMeal { meal, error in
             
-            if let error = error {
-                print(error.localizedDescription)
-            }
-            if let categories = categories {
-                self.categories = categories
-                
-                for category in self.categories {
-                    if let imageUrl = URL(string: category.strCategoryThumb) {
-                        self.categoryImageUrls.append(imageUrl)
-                    }
-                }
-                DispatchQueue.main.async {
-                    self.categoryCollectionView.reloadData()
-                }
-            }
         }
     }
-
+    @IBAction func composeButtonTapped(_ sender: UIButton) {
+        print("tapped")
+    }
 }
 

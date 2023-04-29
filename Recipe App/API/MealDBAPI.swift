@@ -60,4 +60,27 @@ struct MealDBAPI{
             }.resume()
         }
     }
+    
+    func fetchRandomMeal(completion: @escaping(Meal?, Error?) -> Void) {
+        let urlString = URL(string: Constants.endpoint + Constants.random)
+        
+        if let url = urlString {
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                if let error = error {
+                    completion(nil, error)
+                    return
+                }
+                if let data = data {
+                    do {
+                        let decoder = JSONDecoder()
+                        let decodedData = try decoder.decode(Meals.self, from: data)
+                        print(decodedData.meals.first)
+                        completion(decodedData.meals.first,nil)
+                    } catch  {
+                        print("Error")
+                    }
+                }
+            }.resume()
+        }
+    }
 }
